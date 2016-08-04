@@ -1,0 +1,9 @@
+SNP ID	Gene	Accession	AA Pos	Function	Peptide	Global	EAS	EUR	AFR	AMR	SAS	Variance	Protein Description
+429358	APOE	NP_000032	130	missense	MEDV(C)	0.8494	0.9137	0.8449	0.7322	0.8963	0.9131	0.1815	 apolipoprotein E precursor [Homo sapiens]
+429358	APOE	NP_000032	130	missense	MEDV(R)	0.1506	0.0863	0.1551	0.2678	0.1037	0.0869	0.1815	 apolipoprotein E precursor [Homo sapiens]
+429358	APOE	NP_000032	130	missense	(C)GRLVQYRGE	0.8494	0.9137	0.8449	0.7322	0.8963	0.9131	0.1815	 apolipoprotein E precursor [Homo sapiens]
+429358	APOE	NP_000032	130	missense	(R)GRLVQYRGE	0.1506	0.0863	0.1551	0.2678	0.1037	0.0869	0.1815	 apolipoprotein E precursor [Homo sapiens]
+429358	APOE	NP_000032	130	missense	MEDV(C)	0.8494	0.9137	0.8449	0.7322	0.8963	0.9131	0.1815	 apolipoprotein E precursor [Homo sapiens]
+429358	APOE	NP_000032	130	missense	MEDV(R)	0.1506	0.0863	0.1551	0.2678	0.1037	0.0869	0.1815	 apolipoprotein E precursor [Homo sapiens]
+429358	APOE	NP_000032	130	missense	GRLVQYRG(C)GRLVQYRGE	0.8494	0.9137	0.8449	0.7322	0.8963	0.9131	0.1815	 apolipoprotein E precursor [Homo sapiens]
+429358	APOE	NP_000032	130	missense	GRLVQYRG(R)GRLVQYRGE	0.1506	0.0863	0.1551	0.2678	0.1037	0.0869	0.1815	 apolipoprotein E precursor [Homo sapiens]
