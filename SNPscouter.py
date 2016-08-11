@@ -12,7 +12,7 @@ import listviewer
 import SNPdata
 from datetime import datetime
 
-class Listy:
+class SNPscouter:
 
 	def __init__(self):
 		self.dbpath = "dbfiles\SNP.db"
@@ -254,7 +254,7 @@ class Listy:
 				self.output = Value
 		# Error out, if we didn't see required options:		
 		if "-p" in OptionsSeen and not "-f" in OptionsSeen:
-			print("  Fasta file (-f) required where peptide file (-p) used")
+			print("  ERROR: Fasta file (-f) required where peptide file (-p) used")
 			error = True
 
 		#Exit if there's an error anywhere

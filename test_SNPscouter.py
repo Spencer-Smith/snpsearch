@@ -1,7 +1,7 @@
 #This class has the test cases containing unit tests for listmaker.
 
 import unittest
-import listmaker
+import SNPscouter
 import SNPdata
 import elisaloader
 import querybuilder
@@ -177,44 +177,44 @@ class ListyHelpersTestCase(unittest.TestCase):
 class ListMakerTestCase(unittest.TestCase):
 
 	def setUp(self):
-		self.listy = listmaker.Listy()
-		self.listy.output = "TEST_FILES\TEST_list.txt"
-		self.listy.dbpath = "dbfiles\SNP.db"
+		self.scouter = SNPscouter.SNPscouter()
+		self.scouter.output = "TEST_FILES\TEST_list.txt"
+		self.scouter.dbpath = "dbfiles\SNP.db"
 
-	def test_listy_elisa(self):
+	def test_scouter_elisa(self):
 		"""Does Listy work as expected when given only an ELISA file?"""
-		self.listy.elipath = "TEST_FILES\TEST_elisa.txt"
-		self.listy.Main()
+		self.scouter.elipath = "TEST_FILES\TEST_elisa.txt"
+		self.scouter.Main()
 
-		expectedoutput = "TEST_FILES\expected_listy_elisa.txt"
-		self.assertFilesEqual(self.listy.output, expectedoutput)
+		expectedoutput = "TEST_FILES\expected_scouter_elisa.txt"
+		self.assertFilesEqual(self.scouter.output, expectedoutput)
 
-	def test_listy_fasta(self):
+	def test_scouter_fasta(self):
 		"""Does Listy work as expected when given only a fasta file?"""
-		self.listy.faspath = "TEST_FILES\TEST.fasta"
-		self.listy.Main()
+		self.scouter.faspath = "TEST_FILES\TEST.fasta"
+		self.scouter.Main()
 
-		expectedoutput = "TEST_FILES\expected_listy_fasta.txt"
-		self.assertFilesEqual(self.listy.output, expectedoutput)
+		expectedoutput = "TEST_FILES\expected_scouter_fasta.txt"
+		self.assertFilesEqual(self.scouter.output, expectedoutput)
 
-	def test_listy_elisa_and_fasta(self):
+	def test_scouter_elisa_and_fasta(self):
 		"""Does Listy work as expected when given ELISA and fasta files?"""
-		self.listy.elipath = "TEST_FILES\TEST_elisa.txt"
-		self.listy.faspath = "TEST_FILES\TEST.fasta"
-		self.listy.Main()
+		self.scouter.elipath = "TEST_FILES\TEST_elisa.txt"
+		self.scouter.faspath = "TEST_FILES\TEST.fasta"
+		self.scouter.Main()
 
-		expectedoutput = "TEST_FILES\expected_listy_elifas.txt"
-		self.assertFilesEqual(self.listy.output, expectedoutput)
+		expectedoutput = "TEST_FILES\expected_scouter_elifas.txt"
+		self.assertFilesEqual(self.scouter.output, expectedoutput)
 
-	def test_listy_peptides(self):
+	def test_scouter_peptides(self):
 		"""Does Listy work as expected when given ELISA, fasta, and peptide files?"""
-		self.listy.elipath = "TEST_FILES\TEST_elisa.txt"
-		self.listy.faspath = "TEST_FILES\TEST.fasta"
-		self.listy.peppath = "TEST_files\TEST_peptides.txt"
-		self.listy.Main()
+		self.scouter.elipath = "TEST_FILES\TEST_elisa.txt"
+		self.scouter.faspath = "TEST_FILES\TEST.fasta"
+		self.scouter.peppath = "TEST_files\TEST_peptides.txt"
+		self.scouter.Main()
 
-		expectedoutput = "TEST_FILES\expected_listy_peptides.txt"
-		self.assertFilesEqual(self.listy.output, expectedoutput)
+		expectedoutput = "TEST_FILES\expected_scouter_peptides.txt"
+		self.assertFilesEqual(self.scouter.output, expectedoutput)
 
 	def assertFilesEqual(self, file1, file2):
 		in1 = open(file1,'r')
