@@ -263,7 +263,7 @@ class SNPscouter:
 
 if __name__ == "__main__":
 	starttime = datetime.now()
-	migo = Listy()
+	migo = SNPscouter()
 	migo.ParseCommandLine(sys.argv[1:])
 	migo.Main()
 	print("Elapsed time: " + str(datetime.now() - starttime))
